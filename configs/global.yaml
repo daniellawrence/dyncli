@@ -1,0 +1,6 @@
+---
+commands:
+  - "version"
+  - "is-up"
+
+url: http://linkedin.com
