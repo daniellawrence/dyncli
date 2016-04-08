@@ -3,16 +3,16 @@
 """
 import click
 from utils import get
+from . import apply_configs
 
 
 @click.command()
-@click.option('--name', metavar="name", help='The person to greet.', required=True)
-@click.pass_context
-def main(ctx, name):
-    """ Check if the url is up"""
-    url = ctx._meta.get('url')
+@apply_configs
+def main(url):
+    """ Check if dansysadm.com is up"""
+    print "dansysadm_is-up.py: Checking if DANSYSADM.COM is UP!"
     r = get.health_check(url)
-    print "Hello {name} from {url}, {r}".format(**locals())
+    print "dansysadm_is-up.py: DANSYSADM.COM, {r}".format(**locals())
 
 
 if __name__ == '__main__':

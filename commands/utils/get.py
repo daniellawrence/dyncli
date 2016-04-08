@@ -2,4 +2,7 @@ import requests
 
 
 def health_check(url):
-    return requests.get(url).status_code
+    try:
+        return requests.get(url).status_code
+    except Exception:
+        return 729

@@ -1,2 +1,6 @@
 ---
+commands:
+  - "is-up"
+  - "ping"
+
 url: http://dansysadm.com
